@@ -9,7 +9,7 @@
       EAST
       <div
         id="east"
-        class="text-left font-bold text-gray-700 bg-blue-400/50 rounded-3xl text-2xl p-5 shadow-lg"
+        class="text-left font-bold text-gray-700 bg-slate-600/30 rounded-3xl text-2xl p-5 shadow-lg"
       >
         <div class="p-10">
           1. {{ e0 }} <img width="100" class="float-right" id="ep0" />
@@ -62,7 +62,7 @@
       WEST
       <div
         id="east"
-        class="text-left font-bold text-gray-700 bg-rose-600/50 rounded-3xl text-2xl p-5 shadow-lg"
+        class="text-left font-bold text-gray-700 bg-slate-600/30 rounded-3xl text-2xl p-5 shadow-lg"
       >
         <div class="p-10">
           1. {{ w0 }} <img width="100" class="float-right" id="wp0" />
@@ -112,6 +112,9 @@
       </div>
     </div>
   </div>
+  <div
+    class="mt-20 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg grid grid-cols-2 grid-flow-col gap-4"
+  ></div>
 </template>
 <script>
 export default {
@@ -298,111 +301,111 @@ export default {
           `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep14}.png`
         );
 
-        this.w0 = eastConference[0].teamSitesOnly.teamTricode;
-        this.wp0 = this.e0.toLowerCase();
-        let wp0 = document.getElementById('ep0');
-        ep0.setAttribute(
+        this.w0 = westConference[0].teamSitesOnly.teamTricode;
+        this.wp0 = this.w0.toLowerCase();
+        let wp0 = document.getElementById('wp0');
+        wp0.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep0}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp0}.png`
         );
-        this.w1 = eastConference[1].teamSitesOnly.teamTricode;
-        this.wp1 = this.e1.toLowerCase();
-        let wp1 = document.getElementById('ep1');
-        ep1.setAttribute(
+        this.w1 = westConference[1].teamSitesOnly.teamTricode;
+        this.wp1 = this.w1.toLowerCase();
+        let wp1 = document.getElementById('wp1');
+        wp1.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep1}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp1}.png`
         );
-        this.w2 = eastConference[2].teamSitesOnly.teamTricode;
-        this.wp2 = this.e2.toLowerCase();
-        let wp2 = document.getElementById('ep2');
-        ep2.setAttribute(
+        this.w2 = westConference[2].teamSitesOnly.teamTricode;
+        this.wp2 = this.w2.toLowerCase();
+        let wp2 = document.getElementById('wp2');
+        wp2.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep2}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp2}.png`
         );
-        this.w3 = eastConference[3].teamSitesOnly.teamTricode;
-        this.wp3 = this.e3.toLowerCase();
-        let wp3 = document.getElementById('ep3');
-        ep3.setAttribute(
+        this.w3 = westConference[3].teamSitesOnly.teamTricode;
+        this.wp3 = this.w3.toLowerCase();
+        let wp3 = document.getElementById('wp3');
+        wp3.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep3}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp3}.png`
         );
-        this.w4 = eastConference[4].teamSitesOnly.teamTricode;
-        this.wp4 = this.e4.toLowerCase();
-        let wp4 = document.getElementById('ep4');
-        ep4.setAttribute(
+        this.w4 = westConference[4].teamSitesOnly.teamTricode;
+        this.wp4 = this.w4.toLowerCase();
+        let wp4 = document.getElementById('wp4');
+        wp4.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep4}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp4}.png`
         );
-        this.w5 = eastConference[5].teamSitesOnly.teamTricode;
-        this.wp5 = this.e5.toLowerCase();
-        let wp5 = document.getElementById('ep5');
-        ep5.setAttribute(
+        this.w5 = westConference[5].teamSitesOnly.teamTricode;
+        this.wp5 = this.w5.toLowerCase();
+        let wp5 = document.getElementById('wp5');
+        wp5.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep5}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp5}.png`
         );
-        this.w6 = eastConference[6].teamSitesOnly.teamTricode;
-        this.wp6 = this.e6.toLowerCase();
-        let wp6 = document.getElementById('ep6');
-        ep6.setAttribute(
+        this.w6 = westConference[6].teamSitesOnly.teamTricode;
+        this.wp6 = this.w6.toLowerCase();
+        let wp6 = document.getElementById('wp6');
+        wp6.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep6}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp6}.png`
         );
-        this.w7 = eastConference[7].teamSitesOnly.teamTricode;
-        this.wp7 = this.e7.toLowerCase();
-        let wp7 = document.getElementById('ep7');
-        ep7.setAttribute(
+        this.w7 = westConference[7].teamSitesOnly.teamTricode;
+        this.wp7 = this.w7.toLowerCase();
+        let wp7 = document.getElementById('wp7');
+        wp7.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep7}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp7}.png`
         );
-        this.w8 = eastConference[8].teamSitesOnly.teamTricode;
-        this.wp8 = this.e8.toLowerCase();
-        let wp8 = document.getElementById('ep8');
-        ep8.setAttribute(
+        this.w8 = westConference[8].teamSitesOnly.teamTricode;
+        this.wp8 = this.w8.toLowerCase();
+        let wp8 = document.getElementById('wp8');
+        wp8.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep8}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp8}.png`
         );
-        this.w9 = eastConference[9].teamSitesOnly.teamTricode;
-        this.wp9 = this.e9.toLowerCase();
-        let wp9 = document.getElementById('ep9');
-        ep9.setAttribute(
+        this.w9 = westConference[9].teamSitesOnly.teamTricode;
+        this.wp9 = this.w9.toLowerCase();
+        let wp9 = document.getElementById('wp9');
+        wp9.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep9}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp9}.png`
         );
-        this.w10 = eastConference[10].teamSitesOnly.teamTricode;
-        this.wp10 = this.e10.toLowerCase();
-        let wp10 = document.getElementById('ep10');
-        ep10.setAttribute(
+        this.w10 = westConference[10].teamSitesOnly.teamTricode;
+        this.wp10 = this.w10.toLowerCase();
+        let wp10 = document.getElementById('wp10');
+        wp10.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep10}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp10}.png`
         );
-        this.w11 = eastConference[11].teamSitesOnly.teamTricode;
-        this.wp11 = this.e11.toLowerCase();
-        let wp11 = document.getElementById('ep11');
-        ep11.setAttribute(
+        this.w11 = westConference[11].teamSitesOnly.teamTricode;
+        this.wp11 = this.w11.toLowerCase();
+        let wp11 = document.getElementById('wp11');
+        wp11.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep11}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp11}.png`
         );
-        this.w12 = eastConference[12].teamSitesOnly.teamTricode;
-        this.wp12 = this.e12.toLowerCase();
-        let wp12 = document.getElementById('ep12');
-        ep12.setAttribute(
+        this.w12 = westConference[12].teamSitesOnly.teamTricode;
+        this.wp12 = this.w12.toLowerCase();
+        let wp12 = document.getElementById('wp12');
+        wp12.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep12}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp12}.png`
         );
 
-        this.w13 = eastConference[13].teamSitesOnly.teamTricode;
-        this.wp13 = this.e13.toLowerCase();
-        let wp13 = document.getElementById('ep13');
-        ep13.setAttribute(
+        this.w13 = westConference[13].teamSitesOnly.teamTricode;
+        this.wp13 = this.w13.toLowerCase();
+        let wp13 = document.getElementById('wp13');
+        wp13.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep13}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp13}.png`
         );
-        this.w14 = eastConference[14].teamSitesOnly.teamTricode;
-        this.wp14 = this.e14.toLowerCase();
-        let wp14 = document.getElementById('ep14');
-        ep14.setAttribute(
+        this.w14 = westConference[14].teamSitesOnly.teamTricode;
+        this.wp14 = this.w14.toLowerCase();
+        let wp14 = document.getElementById('wp14');
+        wp14.setAttribute(
           'src',
-          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.ep14}.png`
+          `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp14}.png`
         );
       });
   },
