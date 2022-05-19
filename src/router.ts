@@ -28,11 +28,6 @@ const routes: RouteRecordRaw[] = [
     name: "Games",
     component: Games,
   },
-  {
-    path: "/news",
-    name: "News",
-    component: News,
-  },
 ];
 
 const router = createRouter({
