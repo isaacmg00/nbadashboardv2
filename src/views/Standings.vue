@@ -1,120 +1,243 @@
 <template>
-  <h2 class="text-gray-700 text-2xl font-medium text-left mb-5">
-    Conference Standings
+  <h2 class="mt-0 text-gray-700 text-5xl font-bold text-left mb-5">
+    Playoff Picture
   </h2>
+
   <div
     class="p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg grid grid-cols-2 grid-flow-col gap-4"
   >
-    <div id="east" class="text-left text-gray-700 text-1xl p-5">
+    <div>
+      <img
+        width="200"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/96/Eastern_Conference_%28NBA%29_logo_2018.png"
+      />
+      <p class="pt-10 text-gray-700 font-bold text-xl">
+        {{ seriesStatusEast }}
+      </p>
+      <p class="pt-10 text-gray-700 font-bold text-l">
+        Eastern Conference Finals
+      </p>
+    </div>
+    <div>
+      <img
+        width="200"
+        src="https://upload.wikimedia.org/wikipedia/commons/4/45/Western_Conference_%28NBA%29_logo_2018.png"
+      />
+      <p class="pt-10 text-gray-700 font-bold text-xl">
+        {{ seriesStatusWest }}
+      </p>
+      <p class="pt-10 text-gray-700 font-bold text-l">
+        Western Conference Finals
+      </p>
+    </div>
+  </div>
+  <h2 class="mt-10 text-gray-700 text-5xl font-bold text-left">
+    Conference Standings
+  </h2>
+  <p class="text-gray-700 text-1xl font-bold text-left mb-5">
+    *regular season*
+  </p>
+  <div
+    class="p-5 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg grid grid-cols-2 grid-flow-col gap-4"
+  >
+    <div id="east" class="text-gray-700 text-3xl">
       EAST
       <div
         id="east"
-        class="text-left font-bold text-gray-700 bg-slate-600/30 rounded-3xl text-2xl p-5 shadow-lg"
+        class="font-bold text-gray-700 bg-blue-400/30 rounded-3xl text-1xl p-5 m-5 shadow-lg"
       >
-        <div class="p-10">
-          1. {{ e0 }} <img width="100" class="float-right" id="ep0" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep0" />
+          <p class="text-center pb-3">1. {{ e0 }}</p>
         </div>
-        <div class="p-10">
-          2. {{ e1 }} <img width="100" class="float-right" id="ep1" />
+
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep1" />
+          <p class="text-center pb-3">2. {{ e1 }}</p>
         </div>
-        <div class="p-10">
-          3. {{ e2 }} <img width="100" class="float-right" id="ep2" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep2" />
+          <p class="text-center pb-3">3. {{ e2 }}</p>
         </div>
-        <div class="p-10">
-          4. {{ e3 }} <img width="100" class="float-right" id="ep3" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep3" />
+          <p class="text-center pb-3">4. {{ e3 }}</p>
         </div>
-        <div class="p-10">
-          5. {{ e4 }} <img width="100" class="float-right" id="ep4" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep4" />
+          <p class="text-center pb-3">5. {{ e4 }}</p>
         </div>
-        <div class="p-10">
-          6. {{ e5 }} <img width="100" class="float-right" id="ep5" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep5" />
+          <p class="text-center pb-3">6. {{ e5 }}</p>
         </div>
-        <div class="p-10">
-          7. {{ e6 }} <img width="100" class="float-right" id="ep6" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep6" />
+          <p class="text-center pb-3">7. {{ e6 }}</p>
         </div>
-        <div class="p-10">
-          8. {{ e7 }} <img width="100" class="float-right" id="ep7" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep7" />
+          <p class="text-center pb-3">8. {{ e7 }}</p>
         </div>
-        <div class="p-10">
-          9. {{ e8 }} <img width="100" class="float-right" id="ep8" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep8" />
+          <p class="text-center pb-3">9. {{ e8 }}</p>
         </div>
-        <div class="p-10">
-          10. {{ e9 }} <img width="100" class="float-right" id="ep9" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep9" />
+          <p class="text-center pb-3">10. {{ e9 }}</p>
         </div>
-        <div class="p-10">
-          11. {{ e10 }} <img width="100" class="float-right" id="ep10" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep10" />
+          <p class="text-center pb-3">11. {{ e10 }}</p>
         </div>
-        <div class="p-10">
-          12. {{ e11 }} <img width="100" class="float-right" id="ep11" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep11" />
+          <p class="text-center pb-3">12. {{ e11 }}</p>
         </div>
-        <div class="p-10">
-          13. {{ e12 }} <img width="100" class="float-right" id="ep12" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep12" />
+          <p class="text-center pb-3">13. {{ e12 }}</p>
         </div>
-        <div class="p-10">
-          14. {{ e13 }} <img width="100" class="float-right" id="ep13" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep13" />
+          <p class="text-center pb-3">14. {{ e13 }}</p>
         </div>
-        <div class="p-10 mb-10">
-          15. {{ e14 }} <img width="100" class="float-right" id="ep14" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-blue-500 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="ep14" />
+          <p class="text-center pb-3">15. {{ e14 }}</p>
         </div>
       </div>
     </div>
-    <div id="wast" class="text-left text-gray-700 text-1xl p-5">
+    <div id="west" class="text-gray-700 text-3xl">
       WEST
       <div
         id="east"
-        class="text-left font-bold text-gray-700 bg-slate-600/30 rounded-3xl text-2xl p-5 shadow-lg"
+        class="font-bold text-gray-700 bg-red-400/30 rounded-3xl text-1xl p-5 m-5 shadow-lg"
       >
-        <div class="p-10">
-          1. {{ w0 }} <img width="100" class="float-right" id="wp0" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp0" />
+          <p class="text-center pb-3">1. {{ w0 }}</p>
         </div>
-        <div class="p-10">
-          2. {{ w1 }} <img width="100" class="float-right" id="wp1" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp1" />
+          <p class="text-center pb-3">2. {{ w1 }}</p>
         </div>
-        <div class="p-10">
-          3. {{ w2 }} <img width="100" class="float-right" id="wp2" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp2" />
+          <p class="text-center pb-3">3. {{ w2 }}</p>
         </div>
-        <div class="p-10">
-          4. {{ w3 }} <img width="100" class="float-right" id="wp3" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp3" />
+          <p class="text-center pb-3">4. {{ w3 }}</p>
         </div>
-        <div class="p-10">
-          5. {{ w4 }} <img width="100" class="float-right" id="wp4" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp4" />
+          <p class="text-center pb-3">5. {{ w4 }}</p>
         </div>
-        <div class="p-10">
-          6. {{ w5 }} <img width="100" class="float-right" id="wp5" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp5" />
+          <p class="text-center pb-3">6. {{ w5 }}</p>
         </div>
-        <div class="p-10">
-          7. {{ w6 }} <img width="100" class="float-right" id="wp6" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp6" />
+          <p class="text-center pb-3">7. {{ w6 }}</p>
         </div>
-        <div class="p-10">
-          8. {{ w7 }} <img width="100" class="float-right" id="wp7" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp7" />
+          <p class="text-center pb-3">8. {{ w7 }}</p>
         </div>
-        <div class="p-10">
-          9. {{ w8 }} <img width="100" class="float-right" id="wp8" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp8" />
+          <p class="text-center pb-3">9. {{ w8 }}</p>
         </div>
-        <div class="p-10">
-          10. {{ w9 }} <img width="100" class="float-right" id="wp9" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp9" />
+          <p class="text-center pb-3">10. {{ w9 }}</p>
         </div>
-        <div class="p-10">
-          11. {{ w10 }} <img width="100" class="float-right" id="wp10" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp10" />
+          <p class="text-center pb-3">11. {{ w10 }}</p>
         </div>
-        <div class="p-10">
-          12. {{ w11 }} <img width="100" class="float-right" id="wp11" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp11" />
+          <p class="text-center pb-3">12. {{ w11 }}</p>
         </div>
-        <div class="p-10">
-          13. {{ w12 }} <img width="100" class="float-right" id="wp12" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp12" />
+          <p class="text-center pb-3">13. {{ w12 }}</p>
         </div>
-        <div class="p-10">
-          14. {{ w13 }} <img width="100" class="float-right" id="wp13" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp13" />
+          <p class="text-center pb-3">14. {{ w13 }}</p>
         </div>
-        <div class="p-10 mb-10">
-          15. {{ w14 }} <img width="100" class="float-right" id="wp14" />
+        <div
+          class="p-0 hover:text-white text-scale-105 hover:-translate-y-1 hover:scale-105 hover:bg-red-700 duration-300 rounded-xl"
+        >
+          <img width="100" class="center" id="wp14" />
+          <p class="text-center pb-3">15. {{ w14 }}</p>
         </div>
       </div>
     </div>
   </div>
-  <div
-    class="mt-20 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg grid grid-cols-2 grid-flow-col gap-4"
-  ></div>
 </template>
 <script>
 export default {
@@ -181,9 +304,17 @@ export default {
       wp12: null,
       wp13: null,
       wp14: null,
+      seriesStatusEast: null,
+      seriesStatusWest: null,
     };
   },
   async created() {
+    const year = new Date().getFullYear();
+    let month = new Date().getUTCMonth() + 1;
+    month = '0' + month;
+    let day = new Date().getDate();
+    const urlDate = year + month + day;
+    const nextDate = parseInt(urlDate) + 1;
     // Simple GET request using fetch
     await fetch(
       `http://data.nba.net/data/10s/prod/v1/current/standings_conference.json`
@@ -407,6 +538,25 @@ export default {
           'src',
           `https://www.nba.com/.element/img/1.0/teamsites/logos/teamlogos_500x500/${this.wp14}.png`
         );
+      })
+      .then((data) =>
+        fetch(`http://data.nba.net/10s/prod/v1/${urlDate}/scoreboard.json`)
+          .then((response2) => response2.json())
+          .then((data2) => {
+            let game = data2.games[0];
+            this.seriesStatusEast = game.playoffs.seriesSummaryText;
+            console.log(this.seriesStatus);
+            console.log(parseInt(urlDate) + 1);
+          })
+      )
+      .then(() => {
+        console.log('were here and ' + nextDate);
+        fetch(`http://data.nba.net/10s/prod/v1/${nextDate}/scoreboard.json`)
+          .then((response3) => response3.json())
+          .then((data3) => {
+            let game = data3.games[0];
+            this.seriesStatusWest = game.playoffs.seriesSummaryText;
+          });
       });
   },
 };

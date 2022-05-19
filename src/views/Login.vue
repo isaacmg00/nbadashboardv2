@@ -72,7 +72,7 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
-const email = ref('example@mmail.com');
+const email = ref('example@gmail.com');
 const password = ref('fffff');
 function login() {
   router.push('/dashboard');

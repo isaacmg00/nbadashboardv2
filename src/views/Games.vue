@@ -1,19 +1,14 @@
 <template>
-  <div
-    class="m-0"
-    :style="{ backgroundImage: 'url(https://vuejs.org/images/logo.png)' }"
-  >
-    <h2 class="text-gray-700 text-2xl font-medium text-left mb-5">
-      Today on the NBA
-    </h2>
+  <div class="m-0">
+    <h2 class="text-gray-700 text-5xl font-bold text-left mb-5">Playoffs</h2>
     <div
       class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg"
     >
-      <h3 class="text-gray-700 text-3xl font-medium text-left m-2 mb-5">
-        Upcoming Games:
+      <h3 class="text-gray-700 text-4xl font-medium text-left m-2 mb-5">
+        Upcoming games this week:
       </h3>
       <div
-        class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-slate-400 duration-100 ..."
+        class="mt-10 p-10 rounded-3xl bg-red-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-red-400 duration-100 rounded-3xl..."
       >
         <p
           id="date1"
@@ -27,7 +22,7 @@
       </div>
 
       <div
-        class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-slate-400 duration-100 ..."
+        class="mt-10 p-10 rounded-3xl bg-blue-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-blue-400 duration-100 ..."
       >
         <p
           id="date2"
@@ -41,7 +36,7 @@
       </div>
 
       <div
-        class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-slate-400 duration-100 ..."
+        class="mt-10 p-10 rounded-3xl bg-red-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-red-400 duration-100 ..."
       >
         <p
           id="date3"
@@ -55,7 +50,7 @@
       </div>
 
       <div
-        class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-slate-400 duration-100 ..."
+        class="mt-10 p-10 rounded-3xl bg-blue-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-blue-400 duration-100 ..."
       >
         <p
           id="date4"
@@ -68,7 +63,7 @@
         </p>
       </div>
       <div
-        class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-slate-400 duration-100 ..."
+        class="mt-10 p-10 rounded-3xl bg-red-400/30 max-w rounded overflow-hidden shadow-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-106 hover:bg-red-400 duration-100 ..."
       >
         <p
           id="date5"
