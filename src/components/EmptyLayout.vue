@@ -8,3 +8,4 @@
 import SignUp from './SignUp.vue';
 import Login from '../views/Login.vue';
 </script>
+

@@ -1,5 +1,5 @@
 <template>
-  <div class="-m-10" :style="myStyle" id="wrapper">
+  <div :style="myStyle" id="wrapper">
     <h2 class="text-gray-700 text-2xl font-medium text-left mb-5">
       Today on the NBA
     </h2>
@@ -79,9 +79,6 @@ export default {
   name: 'get-request',
   data() {
     return {
-      myStyle: {
-        backgroundColor: '#16a085',
-      },
       numGames: null,
       homeTeam: null,
       awayTeam: null,
