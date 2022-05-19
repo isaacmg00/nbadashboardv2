@@ -18,12 +18,19 @@ const layout = computed(
 </script>
 export default { name: "app", components: { GetRequest } };
 <style>
+/*
 #app {
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
+  color: #aaaaaa;
   background-image: url('./assets/signup.jpeg');
+
+}
+*/
+#app {
+  color: #aaaaaa;
 }
 </style>

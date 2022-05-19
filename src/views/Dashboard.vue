@@ -1,74 +1,76 @@
 <template>
-  <h2 class="text-gray-700 text-2xl font-medium text-left mb-5">
-    Today on the NBA
-  </h2>
-  <div
-    class="p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg"
-  >
-    <h3 class="text-gray-700 text-3xl font-medium text-left m-2">Dashboard</h3>
+  <div class="-m-10" :style="myStyle" id="wrapper">
+    <h2 class="text-gray-700 text-2xl font-medium text-left mb-5">
+      Today on the NBA
+    </h2>
+    <div class="p-10 rounded-3xl bg-slate-400/30 max-w rounded shadow-lg">
+      <h3 class="text-gray-700 text-3xl font-medium text-left m-2">
+        Dashboard
+      </h3>
 
-    <div class="text-gray-700 text-2xl font-medium text-left m-2">
-      {{ numGames }} game(s) today
-    </div>
-    <p class="text-gray-700 text-2xl font-medium text-left m-2">
-      {{ vTeam }} @ {{ hTeam }} - {{ time }}
-    </p>
-    <p class="text-gray-700 text-2xl font-medium text-left m-2">
-      {{ seriesStatus }}
-    </p>
-    <p
-      id="live"
-      class="animate-pulse text-red-500 text-3xl font-medium text-left m-2"
-    ></p>
+      <div class="text-gray-700 text-2xl font-medium text-left m-2">
+        {{ numGames }} game(s) today
+      </div>
+      <p class="text-gray-700 text-2xl font-medium text-left m-2">
+        {{ vTeam }} @ {{ hTeam }} - {{ time }}
+      </p>
+      <p class="text-gray-700 text-2xl font-medium text-left m-2">
+        {{ seriesStatus }}
+      </p>
+      <p
+        id="live"
+        class="animate-pulse text-red-500 text-3xl font-medium text-left m-2"
+      ></p>
 
-    <div class="grid grid-cols-2 gap-5">
-      <div class="">
-        <img
-          class="float-left p-10 rounded-3xl bg-slate-700/30 max-w rounded overflow-hidden shadow-lg mb-10"
-          id="away"
-          src=""
-          width="350"
-        />
-        <p class="text-gray-700 text-7xl mt-25 pt-50">{{ vScore }}</p>
+      <div class="grid grid-cols-2 gap-5">
+        <div class="">
+          <img
+            class="float-left p-10 rounded-3xl bg-slate-700/30 max-w rounded overflow-hidden shadow-lg mb-10"
+            id="away"
+            src=""
+            width="350"
+          />
+          <p class="text-gray-700 text-7xl mt-25 pt-50">{{ vScore }}</p>
+        </div>
+        <div class="">
+          <img
+            class="float-left p-10 rounded-3xl bg-slate-700/30 max-w rounded overflow-hidden shadow-lg mb-10"
+            id="home"
+            src=""
+            width="350"
+          />
+          <p class="text-gray-700 text-7xl mt-25 pt-50">{{ hScore }}</p>
+        </div>
+        <p
+          class="mt-10 rounded-3xl bg-slate-700/0 text-left rounded overflow-hidden text-gray-700 text-1xl"
+        >
+          *stats from nba.com*
+        </p>
       </div>
-      <div class="">
-        <img
-          class="float-left p-10 rounded-3xl bg-slate-700/30 max-w rounded overflow-hidden shadow-lg mb-10"
-          id="home"
-          src=""
-          width="350"
-        />
-        <p class="text-gray-700 text-7xl mt-25 pt-50">{{ hScore }}</p>
-      </div>
-      <p
-        class="mt-10 rounded-3xl bg-slate-700/0 text-left rounded overflow-hidden text-gray-700 text-1xl"
-      >
-        *stats from nba.com*
-      </p>
     </div>
-  </div>
-  <div
-    class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg"
-  >
-    <h3 class="text-gray-700 text-3xl font-medium text-left m-2 mb-5">
-      Highlights
-    </h3>
-    <div class="grid-rows-4">
-      <p
-        class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
-      >
-        {{ hl1 }}
-      </p>
-      <p
-        class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
-      >
-        {{ hl2 }}
-      </p>
-      <p
-        class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
-      >
-        {{ hl3 }}
-      </p>
+    <div
+      class="mt-10 p-10 rounded-3xl bg-slate-400/30 max-w rounded overflow-hidden shadow-lg"
+    >
+      <h3 class="text-gray-700 text-3xl font-medium text-left m-2 mb-5">
+        Highlights
+      </h3>
+      <div class="grid-rows-4">
+        <p
+          class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
+        >
+          {{ hl1 }}
+        </p>
+        <p
+          class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
+        >
+          {{ hl2 }}
+        </p>
+        <p
+          class="p-10 text-gray-700 text-2xl text-left rounded-3xl bg-slate-700/10 max-w rounded overflow-hidden shadow-lg mb-10"
+        >
+          {{ hl3 }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -77,6 +79,9 @@ export default {
   name: 'get-request',
   data() {
     return {
+      myStyle: {
+        backgroundColor: '#16a085',
+      },
       numGames: null,
       homeTeam: null,
       awayTeam: null,
