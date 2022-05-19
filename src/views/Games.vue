@@ -28,15 +28,28 @@ export default {
     };
   },
   async created() {
+    const firstDate = new Date(2022, 4, 19);
+    let today = new Date();
+
+    function daysBetween(one, another) {
+      return Math.round(Math.abs(+one - +another) / 8.64e7);
+    }
+
+    let gap = daysBetween(firstDate, today);
+    let startDate = 1374 + gap;
     // Simple GET request using fetch
-    await fetch(`http://data.nba.net/10s/prod/v1/${urlDate}/scoreboard.json`)
+    await fetch(`http://data.nba.net/data/10s/prod/v1/2021/schedule.json`)
       .then((response) => response.json())
-      .then((data) => {})
-      .then((data) =>
-        fetch(
-          `http://data.nba.net/data/10s/prod/v1/${urlDate}/${this.gameID}_preview_article.json`
-        )
-      );
+      .then((data) => {
+        let game1, game2, game3, game4, game5;
+        game1 = data.league.standard[startDate];
+        game2 = data.league.standard[startDate + 1];
+        game3 = data.league.standard[startDate + 2];
+        game4 = data.league.standard[startDate + 3];
+        game5 = data.league.standard[startDate + 4];
+
+        console.log(game1);
+      });
   },
 };
 </script>
